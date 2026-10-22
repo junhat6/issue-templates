@@ -1,0 +1,41 @@
+name: PBI
+description: 実現したい体験を書く。Why と体験がはっきりしていれば、How は何でもいい
+type: PBI
+body:
+  - type: markdown
+    attributes:
+      value: |
+        PBI は「ユーザーに届けたい体験」の単位です。How (実装方法・細かい仕様) はここに書かなくて大丈夫。担当者が AI と一緒に、Issue のコメントで詰めていきます。
+        タイトルは機能の名前ではなく「誰が何をできるようになるか」で書きます (例: 残り時間をゲージで捉え、集中して取り組める)。
+  - type: textarea
+    id: story
+    attributes:
+      label: ユーザーストーリー
+      description: 誰として・何をしたいか・なぜか。
+      placeholder: 参加者として、残り時間を直感的に捉えながら作業したい。なぜなら、締め切りを意識して集中したいからだ。
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: 今なにに困っているか。誰がどの場面で困っているか。
+      placeholder: 数字だけのタイマーでは、残り時間の長さや締め切りが迫る感覚を捉えにくい。
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: ユーザーに提供する体験
+      description: どの場面で、何ができるようになるか。分かる範囲で。
+      placeholder: 作業中、ゲージの残量と減る速さから、時間の余裕や終了を感じ取れる。
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: 関連 Issue・PR、まだ分からないこと。あれば。
+      placeholder: "関連: #123 / 未確認: スマホでの表示"
+    validations:
+      required: false

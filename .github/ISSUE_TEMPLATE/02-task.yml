@@ -1,0 +1,33 @@
+name: Task
+description: 具体的な作業を書く。思いついた時点で立ててよい
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Task は PBI を実現するための作業です。思いついた時点で立てて大丈夫。親 PBI は後から紐付けても構いません (Relationships の Parent issue / Sub-issues)。
+        How が決まっていなくても始められます。細かい仕様は Issue のコメントで、方針案・質問・メモを分けて詰めていきます。
+  - type: input
+    id: parent
+    attributes:
+      label: 親 PBI
+      description: 分かれば。後から紐付けてもよい。
+      placeholder: "#737"
+    validations:
+      required: false
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: この作業が必要な理由。今なにに困っているか。
+      placeholder: タイマーの開始が音だけで気づきにくい。音が聞こえなくても、開始したと分かるようにしたい。
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How (任意)
+      description: 思いついている方針や案があれば。決まったことではなく「案」として書く。
+      placeholder: "案: 開始時にタイマーが一瞬大きくなって、元の大きさに戻る"
+    validations:
+      required: false
